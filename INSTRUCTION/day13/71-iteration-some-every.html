@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const prices = [12,454,12,67,3,87,6,213];
+
+        //tüm elemnalrın price>0 şartını sağlaması durumunda true döner yoksa false döner
+        if( prices.every( (price) => price > 0 ) ){
+            alert("Tüm sayılar pozitif")
+        }
+
+        //en az 1 elamının price<0 şartını sağlaması durumunda true döner yoksa alse döner
+        if(prices.some ( (price) => price<0 )){
+            alert("En az 1 eleman negatif")
+        }
+    </script>
+</body>
+</html>

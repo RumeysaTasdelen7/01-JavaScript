@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const animals = ["fil","kuş","deve","fare","aslan","kartal"];
+
+        // FOR IN: index numarası döner
+        for(let i in animals){
+            console.log(i, animals[i]);
+        }
+
+        // FOR OF: value ve index
+        for(let [i, animal] of animals.entries()){
+            console.log(i, animal);
+        }
+        //FOR OF: değerleri döner
+        for(let animal of animals){
+            console.log(animal);
+        }
+
+        // FOR OF: string iteration
+        for(let c of "Hello Javascript"){
+            console.log(c);
+        }
+
+    </script>
+</body>
+</html>

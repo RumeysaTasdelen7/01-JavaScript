@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary</title>
+</head>
+<body>
+    <input type="number"  id="txtSalary" oninput="setSalary()">
+
+    <input type="radio" name="status" id="rdRetired" onchange="setSalary()" value="retired" checked>
+        <label for="rdRetired">Emekli</label>
+
+    <input type="radio" name="status" id="rdEmployee" onchange="setSalary()" value="employee">
+        <label for="rdEmployee">Çalışan</label>
+
+    <h2 id="result"></h2>
+    <script>
+        //Çalışan seçildiğinde tam, 
+        //emekli ise %10 kesinti uygulayarak maaşı gösteriniz.
+        //çalışan ise %5 kesintili maaşı gösteriniz
+        //Bunu ternary kullanarak yapınız
+
+        const txtSalary = document.querySelector("#txtSalary");
+        const resultEl = document.querySelector("#result");
+        
+        function setSalary(){
+            const status = document.querySelector('input[name="status"]:checked');
+            let salary = txtSalary.value;
+            salary = status.value === "retired" ? salary * 0.9 : salary * 0.95;
+            resultEl.innerHTML = `${salary.toFixed(2)}₺`; //tofixed(2)=virgülden sonra iki hane gözüksün demek
+
+            //yukarıda aslındaşunu yaptık indirim uygulamak yerine direkt olarak
+            //çalışan kişinin maaşının %95 ını yazdırdık
+            //emeklinin maaşının %90 ını yazdırdık
+        }
+    </script>
+</body>
+</html>

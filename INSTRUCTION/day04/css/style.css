@@ -1,0 +1,14 @@
+.title{
+    color: red;
+    font-size:30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.bg-blue{
+    background-color: blue;
+}
+
+h1{
+    background-color: blueviolet;
+}

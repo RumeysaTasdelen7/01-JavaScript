@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName:"John",
+            lastName:"Doe"
+        }
+
+        const aliPerson = person;
+
+        //üst satırda doğrudan eşitleme yaptığı için ve object veritipi
+        //referans türünde olduğu için her iki değişkende aynı nesneye referans 
+        //birinde yapılan değişiklik diğerinine etkiler
+        aliPerson.firstName = "Ali";
+        aliPerson.lastName = "Gel";
+
+        console.log(person);
+        console.log(aliPerson);
+
+        console.log(person === aliPerson);
+
+        const veliPerson = Object.create(person);
+        veliPerson.firstName = "Veli";
+        veliPerson.lastName ="Gel";
+
+        console.log(person);
+        console.log(veliPerson);
+
+    </script>
+</body>
+</html>
